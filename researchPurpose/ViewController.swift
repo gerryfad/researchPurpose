@@ -15,6 +15,12 @@ class ViewController: UIViewController {
         view.backgroundColor = .red
     }
 
-
 }
 
+#if DEBUG
+extension UIViewController {
+    @objc func injected() {
+        viewDidLoad()
+    }
+}
+#endif
