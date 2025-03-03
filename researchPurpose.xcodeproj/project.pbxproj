@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71087F172D759A5200E96BA2 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71087F162D759A5200E96BA2 /* APIManager.swift */; };
+		7191426E2D74A34E008B75D3 /* ReadiumAdapterGCDWebServer in Frameworks */ = {isa = PBXBuildFile; productRef = 7191426D2D74A34E008B75D3 /* ReadiumAdapterGCDWebServer */; };
+		719142702D74A34E008B75D3 /* ReadiumNavigator in Frameworks */ = {isa = PBXBuildFile; productRef = 7191426F2D74A34E008B75D3 /* ReadiumNavigator */; };
+		719142722D74A34E008B75D3 /* ReadiumShared in Frameworks */ = {isa = PBXBuildFile; productRef = 719142712D74A34E008B75D3 /* ReadiumShared */; };
+		719142742D74A34E008B75D3 /* ReadiumStreamer in Frameworks */ = {isa = PBXBuildFile; productRef = 719142732D74A34E008B75D3 /* ReadiumStreamer */; };
+		719142772D74A42F008B75D3 /* SVProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 719142762D74A42F008B75D3 /* SVProgressHUD */; };
 		71D0CE0C2D7462F00089830B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D0CE0B2D7462F00089830B /* AppDelegate.swift */; };
 		71D0CE0E2D7462F00089830B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D0CE0D2D7462F00089830B /* SceneDelegate.swift */; };
 		71D0CE102D7462F00089830B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D0CE0F2D7462F00089830B /* ViewController.swift */; };
@@ -14,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		71087F162D759A5200E96BA2 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		71D0CE082D7462F00089830B /* researchPurpose.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = researchPurpose.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71D0CE0B2D7462F00089830B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71D0CE0D2D7462F00089830B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -27,12 +34,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				719142702D74A34E008B75D3 /* ReadiumNavigator in Frameworks */,
+				719142772D74A42F008B75D3 /* SVProgressHUD in Frameworks */,
+				719142742D74A34E008B75D3 /* ReadiumStreamer in Frameworks */,
+				719142722D74A34E008B75D3 /* ReadiumShared in Frameworks */,
+				7191426E2D74A34E008B75D3 /* ReadiumAdapterGCDWebServer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		71087F152D759A3D00E96BA2 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				71087F162D759A5200E96BA2 /* APIManager.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		71D0CDFF2D7462F00089830B = {
 			isa = PBXGroup;
 			children = (
@@ -52,6 +72,7 @@
 		71D0CE0A2D7462F00089830B /* researchPurpose */ = {
 			isa = PBXGroup;
 			children = (
+				71087F152D759A3D00E96BA2 /* API */,
 				71D0CE0B2D7462F00089830B /* AppDelegate.swift */,
 				71D0CE0D2D7462F00089830B /* SceneDelegate.swift */,
 				71D0CE0F2D7462F00089830B /* ViewController.swift */,
@@ -77,6 +98,13 @@
 			dependencies = (
 			);
 			name = researchPurpose;
+			packageProductDependencies = (
+				7191426D2D74A34E008B75D3 /* ReadiumAdapterGCDWebServer */,
+				7191426F2D74A34E008B75D3 /* ReadiumNavigator */,
+				719142712D74A34E008B75D3 /* ReadiumShared */,
+				719142732D74A34E008B75D3 /* ReadiumStreamer */,
+				719142762D74A42F008B75D3 /* SVProgressHUD */,
+			);
 			productName = researchPurpose;
 			productReference = 71D0CE082D7462F00089830B /* researchPurpose.app */;
 			productType = "com.apple.product-type.application";
@@ -105,6 +133,10 @@
 				Base,
 			);
 			mainGroup = 71D0CDFF2D7462F00089830B;
+			packageReferences = (
+				7191426C2D74A34E008B75D3 /* XCRemoteSwiftPackageReference "swift-toolkit" */,
+				719142752D74A42F008B75D3 /* XCRemoteSwiftPackageReference "SVProgressHUD" */,
+			);
 			productRefGroup = 71D0CE092D7462F00089830B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -130,6 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71087F172D759A5200E96BA2 /* APIManager.swift in Sources */,
 				71D0CE102D7462F00089830B /* ViewController.swift in Sources */,
 				71D0CE0C2D7462F00089830B /* AppDelegate.swift in Sources */,
 				71D0CE0E2D7462F00089830B /* SceneDelegate.swift in Sources */,
@@ -263,9 +296,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = XGSLCSN6TF;
+				DEVELOPMENT_TEAM = 4EGESD77KB;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 4EGESD77KB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = researchPurpose/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -282,8 +317,10 @@
 					"-Xlinker",
 					"-interposable",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gerry.researchPurpose;
+				PRODUCT_BUNDLE_IDENTIFIER = com.suitmedia.csi.aeon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "CSI AEON Development";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -295,9 +332,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = XGSLCSN6TF;
+				DEVELOPMENT_TEAM = 4EGESD77KB;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 4EGESD77KB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = researchPurpose/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -310,8 +349,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.gerry.researchPurpose;
+				PRODUCT_BUNDLE_IDENTIFIER = com.suitmedia.csi.aeon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "CSI AEON Development";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -340,6 +381,53 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7191426C2D74A34E008B75D3 /* XCRemoteSwiftPackageReference "swift-toolkit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/readium/swift-toolkit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.0;
+			};
+		};
+		719142752D74A42F008B75D3 /* XCRemoteSwiftPackageReference "SVProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SVProgressHUD/SVProgressHUD.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.3.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7191426D2D74A34E008B75D3 /* ReadiumAdapterGCDWebServer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7191426C2D74A34E008B75D3 /* XCRemoteSwiftPackageReference "swift-toolkit" */;
+			productName = ReadiumAdapterGCDWebServer;
+		};
+		7191426F2D74A34E008B75D3 /* ReadiumNavigator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7191426C2D74A34E008B75D3 /* XCRemoteSwiftPackageReference "swift-toolkit" */;
+			productName = ReadiumNavigator;
+		};
+		719142712D74A34E008B75D3 /* ReadiumShared */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7191426C2D74A34E008B75D3 /* XCRemoteSwiftPackageReference "swift-toolkit" */;
+			productName = ReadiumShared;
+		};
+		719142732D74A34E008B75D3 /* ReadiumStreamer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7191426C2D74A34E008B75D3 /* XCRemoteSwiftPackageReference "swift-toolkit" */;
+			productName = ReadiumStreamer;
+		};
+		719142762D74A42F008B75D3 /* SVProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 719142752D74A42F008B75D3 /* XCRemoteSwiftPackageReference "SVProgressHUD" */;
+			productName = SVProgressHUD;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 71D0CE002D7462F00089830B /* Project object */;
 }
